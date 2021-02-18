@@ -1,0 +1,18 @@
+<table border="1px">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Description</th>
+      <th>Done</th>
+      <th>TargetDate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let list of listTodo">
+      <td>{{list.id}}</td>
+      <td>{{list.description}}</td>
+      <td>{{list.done}}</td>
+      <td>{{list.targetDate | date | uppercase}}</td>
+    </tr>
+  </tbody>
+</table>
