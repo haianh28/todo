@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ErrorComponent } from './error/error.component';
 import { ListTodoComponent } from './list-todo/list-todo.component';
+import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { ListTodoComponent } from './list-todo/list-todo.component';
     LoginComponent,
     ErrorComponent,
     ListTodoComponent,
-  ],
+    MenuComponent,
+    FooterComponent,
+  ], //Khai báo các component, directive, pile của module này
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ],//Nạp các module khác mà module này cần
+  providers: [],//Các dịch vụ, mà các component khác có thể sử dụng
+  bootstrap: [AppComponent] // bootstrap định nghĩa component gốc của module
 })
 export class AppModule { }

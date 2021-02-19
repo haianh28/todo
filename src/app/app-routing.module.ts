@@ -8,7 +8,7 @@ import {WelcomeComponent} from './welcome/welcome.component';
 const routes: Routes = [
   {path:"", component:LoginComponent},
   {path:"login", component:LoginComponent},
-  {path:"todo",component: ListTodoComponent},
+  {path:"todos",component: ListTodoComponent},
   {path:"welcome/:name",component: WelcomeComponent},
 {path:'**' ,component:ErrorComponent}
 ];
