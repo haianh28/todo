@@ -1,27 +1,27 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div>
-      <a href="/" class="navbar-brand">
+      <a routerLink="/" class="navbar-brand">
         In28minte
       </a>
     </div>
 
     <ul class="navbar-nav">
-      <li> <a href="/welcome/haicntt28" class="nav-link">
+      <li> <a *ngIf="hardcodes.isUserLoggedIn()" routerLink="/welcome/haicntt28" class="nav-link">
           Home</a>
       </li>
       <li>
-        <a href="/todos" class="nav-link">
+        <a *ngIf="hardcodes.isUserLoggedIn()" routerLink="/todos" class="nav-link">
           Todos</a>
       </li>
     </ul>
 
-    <ul class="navbar-nav navbar-collapse justify-content-end">
-      <li><a href="/login" class="nav-link">
+    <ul  class="navbar-nav navbar-collapse justify-content-end">
+      <li><a *ngIf="!hardcodes.isUserLoggedIn()" routerLink="/login" class="nav-link">
           Login
         </a></li>
 
-      <li><a href="/logout" class="nav-link">
+      <li><a *ngIf="hardcodes.isUserLoggedIn()" routerLink="/logout" class="nav-link">
           Logout
         </a></li>
     </ul>
